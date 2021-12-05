@@ -1,0 +1,122 @@
+h1{
+	font-family: 'Courier';
+	font-size: 120%;
+}
+h2{
+	font-family: 'Courier';
+	font-size: 40px;
+  padding: 10px;
+  border: 2px solid red;
+}
+
+body{
+  display: grid;
+  grid-template-areas: 'head head head head head head head head head head head head'
+                       'sare sare main main main main main main main main main main'
+                       'footer footer footer footer footer footer footer footer footer footer footer footer';
+  grid-gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+}
+p{
+  font-family: Courier New;
+}
+.button{
+ display: inline-block;
+ border: none;
+ color: #331B17;
+ border-radius: 3px 3px 3px 3px;
+ -webkit-border-radius: 3px 3px 3px 3px;
+ -moz-border-radius: 3px 3px 3px 3px;
+ font-family: Courier New;
+ font-weight: bold;
+ width: 240px;
+ height: auto;
+ font-size: 25px;
+ padding: 15px 15px;
+ background-color: #F0340F;
+}
+.button:hover, .button:active{
+ border: none;
+ color: #705D07;
+ box-shadow: inset 0 1px 0 0 #F8E8B5,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ -moz-box-shadow: inset 0 1px 0 0 #F8E8B5,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ -webkit-box-shadow: inset 0 1px 0 0 #F8E8B5,inset 0 -1px 0 0 #e3c852,inset 0 0 0 1px #fce88d;
+ background-color: #fcdf5b;
+}
+
+.space{
+  padding: 20px;
+  display: inline-block;
+  width: auto;
+
+}
+
+.space2{
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.ab{
+  font-size: 20px;
+}
+
+span{
+  font-size: 150%;
+  color: red;
+}
+div{
+  font-size: 40px;
+}header{
+  grid-area: head;
+  font-size: 40px;
+  border-radius:10px
+  text-align: center;
+  width: 100%;
+  background-color: red;
+}
+main{
+  grid-area: main;
+  font-size: 40px;
+  border-radius:10px;
+  text-align: left;
+  min-height: 40vw;
+  width: 100%;
+  padding-right: 5px;
+}
+main>*{
+  max-width: 100%;
+}
+footer{
+  grid-area: footer;
+  font-size: 130%;
+  border-radius:10px;
+  text-align: center;
+  color: grey;
+}
+.sidebar{
+  grid-area: sare;
+  font-size: 40px;
+  border-radius:10px;
+  text-align: left;
+}
+
+@media (max-width: 1200px){
+  body{
+  grid-template-areas: 'head head head head head head head head head head head head'
+                       'sare sare main main main main main main main main main main'
+                       'footer footer footer footer footer footer footer footer footer footer footer footer';
+  }
+}
+@media (max-width: 720px){
+  body{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 'head'
+                         'sare'
+                         'main'
+                         'footer';
+  }
+  }
+
+}
